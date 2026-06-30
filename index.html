@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VE Divisas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="header-info">
+                <h1 class="title">VE <span>Divisas</span></h1>
+                <div class="status-container">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Actualización en tiempo real</span>
+                </div>
+            </div>
+            <button class="close-btn" id="close-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </header>
+
+        <!-- Cards Container -->
+        <main class="cards-container">
+            <!-- BCV (USD) -->
+            <div class="card card-bcv">
+                <div class="icon-container bcv-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="20" width="20" height="2" rx="1"/><path d="M12 2l8 5H4l8-5z"/><path d="M6 10v6"/><path d="M10 10v6"/><path d="M14 10v6"/><path d="M18 10v6"/></svg>
+                </div>
+                <div class="card-info">
+                    <span class="card-title">BCV (USD)</span>
+                    <span class="card-price" id="bcv-usd">Bs --.--</span>
+                </div>
+            </div>
+
+            <!-- Binance (USDT) -->
+            <div class="card card-binance">
+                <div class="icon-container binance-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12.0004 0L1.61133 10.3891L4.44476 13.2225L12.0004 5.66687L19.556 13.2225L22.3894 10.3891L12.0004 0ZM12.0004 7.64161L7.64205 12L12.0004 16.3584L16.3588 12L12.0004 7.64161ZM22.3894 13.6109L19.556 10.7775L16.7226 13.6109L19.556 16.4443L22.3894 13.6109ZM4.44476 10.7775L1.61133 13.6109L4.44476 16.4443L7.27819 13.6109L4.44476 10.7775ZM12.0004 24L22.3894 13.6109L19.556 10.7775L12.0004 18.3331L4.44476 10.7775L1.61133 13.6109L12.0004 24Z"/></svg>
+                </div>
+                <div class="card-info">
+                    <span class="card-title">Binance (USDT)</span>
+                    <span class="card-price" id="binance-usdt">Bs --.--</span>
+                </div>
+            </div>
+
+            <!-- Euro (BCV) -->
+            <div class="card card-euro">
+                <div class="icon-container euro-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12"/><path d="M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg>
+                </div>
+                <div class="card-info">
+                    <span class="card-title">Euro (BCV)</span>
+                    <span class="card-price" id="bcv-eur">Bs --.--</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Update Button -->
+        <button class="update-btn" id="update-btn">
+            <svg class="update-icon" id="update-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            <span id="update-text">Actualizar precios</span>
+        </button>
+
+        <div id="error-message" class="error-message"></div>
+    </div>
+    
+    <script src="renderer.js"></script>
+</body>
+</html>
